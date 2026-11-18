@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.1-0A84FF" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.2-0A84FF" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,37 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.1-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.1/vela-1.0.1-release.apk) |
-| **Taille** | 59 452 975 octets (≈ 56,7 Mio) |
-| **SHA-256** | `a1a63feaf5bdd87609428e3bdd409ed3a76ba0603be403d329d2ddf84c846857` |
+| **APK release (signé)** | [vela-1.0.2-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.2/vela-1.0.2-release.apk) |
+| **Taille** | 59 590 727 octets (≈ 56,8 Mio) |
+| **SHA-256** | `27b9ba69793e1fe8636881a6d949e973c5ef44a4b3387e7a4435ad46d45c5d38` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.1 (versionCode 2 · `com.vela.stream`) |
+| **Version** | 1.0.2 (versionCode 3 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.1-release.apk
-# a1a63feaf5bdd87609428e3bdd409ed3a76ba0603be403d329d2ddf84c846857
+sha256sum vela-1.0.2-release.apk
+# 27b9ba69793e1fe8636881a6d949e973c5ef44a4b3387e7a4435ad46d45c5d38
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.1-release.apk
+adb install -r vela-1.0.2-release.apk
 ```
 
 Les sommes de contrôle des deux APK (release et debug) sont publiées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.1/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.2/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.2
+
+- **Nouveau logo** — deux voiles formant un V autour du mât, en verre liquide : silhouette lisible dès 48 px, déclinée sur toutes les densités et affichée sur l'écran d'accueil de l'app (l'ancien carré « V » générique est remplacé par la vraie marque).
+- **Correctif de reprise en fin de flux** — rouvrir un contenu dont la progression était à moins de 15 s de la fin affichait directement « Terminé ». La lecture repart maintenant du début et la progression est remise à zéro.
+- **Parcours revalidés sur ce build** : MP4 direct, HLS adaptatif et BitTorrent (5 pairs, 100 %) lus sans erreur.
 
 ## Nouveautés 1.0.1
 
