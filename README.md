@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.0-0A84FF" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.1-0A84FF" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,39 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.0-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.0/vela-1.0.0-release.apk) |
-| **Taille** | 59 465 003 octets (≈ 56,7 Mio) |
-| **SHA-256** | `ff365f7e75de1a21ce0f6810758966e2be838b97f1a2cd1f7c9fdc4e125c349a` |
+| **APK release (signé)** | [vela-1.0.1-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.1/vela-1.0.1-release.apk) |
+| **Taille** | 59 452 975 octets (≈ 56,7 Mio) |
+| **SHA-256** | `a1a63feaf5bdd87609428e3bdd409ed3a76ba0603be403d329d2ddf84c846857` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.0 (`com.vela.stream`) |
+| **Version** | 1.0.1 (versionCode 2 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.0-release.apk
-# ff365f7e75de1a21ce0f6810758966e2be838b97f1a2cd1f7c9fdc4e125c349a
+sha256sum vela-1.0.1-release.apk
+# a1a63feaf5bdd87609428e3bdd409ed3a76ba0603be403d329d2ddf84c846857
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.0-release.apk
+adb install -r vela-1.0.1-release.apk
 ```
 
 Les sommes de contrôle des deux APK (release et debug) sont publiées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.0/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.1/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.1
+
+- **Nouvelle icône Liquid Glass minimaliste** — une voile et un mât, sans artifice, déclinée sur toutes les densités (et vérifiée sur le lanceur).
+- **Barre de navigation en verre dépoli** — flou confiné à la pilule, liseré spéculaire, sélection animée et onglets répartis équitablement.
+- **Magasin d'extensions** — bouton direct vers le catalogue communautaire `stremio-addons.net`.
+- **Correctif d'ajout d'extension** — valider une URL restait bloqué sur « Vérification… » : le moteur normalise l'URL et l'erreur s'affichait pendant le chargement. L'aperçu s'affiche maintenant, la touche « Go » du clavier lance la vérification et un délai de 20 s évite tout blocage silencieux.
+- **Affichage** — feuille d'ajout repositionnée au-dessus du clavier, contenu défilable, descriptions tronquées avec ellipsis.
 
 ## Aperçu
 
