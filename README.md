@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.3-0A84FF" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.4-0A84FF" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,46 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.3-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.3/vela-1.0.3-release.apk) |
-| **Taille** | 59 590 727 octets (≈ 56,8 Mio) |
-| **SHA-256** | `7fc8583de182cdab0610989c5c2fea48988c3afe56d411d5178b7dca3ec916cf` |
+| **APK release (signé)** | [vela-1.0.4-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.4/vela-1.0.4-release.apk) |
+| **Taille** | 60 134 883 octets (≈ 57,4 Mio) |
+| **SHA-256** | `4e57601f7e6be8484a28f8d100996b22b5080509234fa9aac4fa92914c0293ae` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.3 (versionCode 4 · `com.vela.stream`) |
+| **Version** | 1.0.4 (versionCode 5 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.3-release.apk
-# 7fc8583de182cdab0610989c5c2fea48988c3afe56d411d5178b7dca3ec916cf
+sha256sum vela-1.0.4-release.apk
+# 4e57601f7e6be8484a28f8d100996b22b5080509234fa9aac4fa92914c0293ae
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.3-release.apk
+adb install -r vela-1.0.4-release.apk
 ```
 
 Les sommes de contrôle de tous les APK publiés sont regroupées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.3/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.4/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.4
+
+- **Nouveau logo** — le V en verre liquide holographique remplace l'ancienne tuile : icône adaptative sur toutes les densités, écran d'accueil et bannière du dépôt.
+- **Bascule Flou / Liquid Glass** — dans Réglages → Apparence. Le style « Liquid Glass » ajoute les dégradés spéculaires, le liseré lumineux et un halo coloré derrière l'interface ; « Flou » garde le verre dépoli historique. Le choix s'applique à toute l'app et est conservé.
+- **Nouvelle barre de navigation** — dock flottant à deux niveaux comme la référence : panneau de verre, pastille de section au-dessus, pilule intérieure, indicateur circulaire sur l'onglet actif, flou réel du contenu derrière.
+- **Lecteur façon iOS 26** — carte vidéo arrondie, croix et volume en capsules de verre, boutons −10 / lecture / +10 en cercles, timeline capsule avec temps écoulé et restant, rangée de puces vitesses / sous-titres / audio / rotation / PiP.
+- **Extensions : tous les catalogues** — Découvrir propose désormais les types réellement installés (Films, Séries, TV, Chaînes, Animés, Sport, Événements, Autres) au lieu de Films/Séries uniquement. Les 83 catalogues TV d'All IPTV, FayaTV, Rakuten TV ou TvVoo sont accessibles, et les chaînes se lisent en direct.
+- **Sous-titres d'extensions** — le lecteur interroge les extensions `subtitles` installées (OpenSubtitles v3, SubDL, SubSource, SubSense, GlobalSubs…) en parallèle avec un délai borné, fusionne les pistes avec celles du flux et les propose dans le menu CC (Français/Anglais vérifiés sur Sintel).
+- **Correctifs d'interaction du lecteur** — le détecteur de tap plein écran mangeait tous les appuis : lecture/pause, volume, CC et fermeture ne répondaient pas. La zone de tap est passée sous les contrôles, et les rangées du haut et du bas ont été remontées hors des zones système (statut / gestes).
+- **Libellés** — une chaîne TV n'est plus étiquetée « FILM » sur sa fiche (TV, Chaîne, Animé, Sport, Événement, Autre).
+
+### Compatibilité magasin d'extensions
+
+Les 51 extensions listées sur `stremio-addons.net` ont été récupérées et leurs manifestes testés. 46 répondent et sont installables ; 5 sont injoignables côté serveur (`aiolists`, `lat-add`, `minha-tv`, `usa-tv`, `streamvix`) et non à cause de l'app. Installations et lectures réelles vérifiées dans Vela : **Torrentio** (flux 4K HDR, seeders), **All IPTV** (catalogues TV et lecture live), **Vela Demo** (MP4/HLS/torrent), plus les extensions intégrées Cinemeta, OpenSubtitles, WatchHub et Public Domain Movies.
 
 ## Nouveautés 1.0.3
 
