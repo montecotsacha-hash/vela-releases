@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.5-386A5E" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.6-386A5E" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,40 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.5-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.5/vela-1.0.5-release.apk) |
-| **Taille** | 59 995 235 octets (≈ 57,2 Mio) |
-| **SHA-256** | `75748b10ed0357d11156b8246e6c3c7f71441355036280e01aed6fc2cfc268c8` |
+| **APK release (signé)** | [vela-1.0.6-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.6/vela-1.0.6-release.apk) |
+| **Taille** | 60 011 619 octets (≈ 57,2 Mio) |
+| **SHA-256** | `b61ff858fd290ea23c940edfa8944d4a31cc4a45b060f16b18b928b601bccb12` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.5 (versionCode 6 · `com.vela.stream`) |
+| **Version** | 1.0.6 (versionCode 7 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.5-release.apk
-# 75748b10ed0357d11156b8246e6c3c7f71441355036280e01aed6fc2cfc268c8
+sha256sum vela-1.0.6-release.apk
+# b61ff858fd290ea23c940edfa8944d4a31cc4a45b060f16b18b928b601bccb12
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.5-release.apk
+adb install -r vela-1.0.6-release.apk
 ```
 
 Les sommes de contrôle de tous les APK publiés sont regroupées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.5/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.6/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.6
+
+- **Mot de passe visible** — un bouton œil dans le champ de connexion affiche ou masque le mot de passe sans quitter la feuille.
+- **Apparition des contenus** — les affiches de films, séries et reprises entrent en fondu, glissement et légère mise à l'échelle, avec un décalage de 28 ms entre les cartes. Appliqué à l'Accueil, à Découvrir et à la Bibliothèque, et rejoué à chaque nouveau filtre.
+- **Transition fiche ↔ accueil repensée** — la fiche arrive du bas en grandissant tandis que l'accueil recule et s'estompe ; au retour, la fiche s'efface vers le bas et l'accueil revient. La barre de navigation descend et remonte avec la transition au lieu de disparaître sèchement. Les changements d'onglets gagnent en rapidité et en ressort.
+- **Menu « Lecture » bouncy** — la feuille des flux apparaît avec une échelle et un glissement à ressort (léger rebond), au lieu d'un simple glissement.
+- **Icône plein écran agrandie** — le bouton d'agrandissement du lecteur passe à 38 dp avec une icône de 24 dp, alignée sur les autres contrôles.
+- **Connexion Google** — l'API Stremio ne propose pas Google (seuls e-mail/mot de passe, Facebook et Apple sont pris en charge) ; aucun faux bouton n'a été ajouté.
 
 ## Nouveautés 1.0.5
 
