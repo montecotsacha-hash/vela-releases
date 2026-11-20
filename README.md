@@ -6,11 +6,11 @@
 
 <p align="center">
   <b>Stremio, réinventé en natif sur Android.</b><br />
-  Moteur <code>stremio-core</code> réel (Rust), interface Jetpack Compose inspirée d'iOS 26, lecture HTTP, HLS et BitTorrent.
+  Moteur <code>stremio-core</code> réel (Rust), interface Jetpack Compose Material You, lecture HTTP, HLS et BitTorrent.
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.4-0A84FF" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.5-386A5E" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,40 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.4-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.4/vela-1.0.4-release.apk) |
-| **Taille** | 60 134 883 octets (≈ 57,4 Mio) |
-| **SHA-256** | `4e57601f7e6be8484a28f8d100996b22b5080509234fa9aac4fa92914c0293ae` |
+| **APK release (signé)** | [vela-1.0.5-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.5/vela-1.0.5-release.apk) |
+| **Taille** | 59 995 235 octets (≈ 57,2 Mio) |
+| **SHA-256** | `75748b10ed0357d11156b8246e6c3c7f71441355036280e01aed6fc2cfc268c8` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.4 (versionCode 5 · `com.vela.stream`) |
+| **Version** | 1.0.5 (versionCode 6 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.4-release.apk
-# 4e57601f7e6be8484a28f8d100996b22b5080509234fa9aac4fa92914c0293ae
+sha256sum vela-1.0.5-release.apk
+# 75748b10ed0357d11156b8246e6c3c7f71441355036280e01aed6fc2cfc268c8
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.4-release.apk
+adb install -r vela-1.0.5-release.apk
 ```
 
 Les sommes de contrôle de tous les APK publiés sont regroupées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.4/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.5/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.5
+
+- **Material You complet** — surfaces tonales douces, coins très arrondis, hiérarchie typographique et contraste adaptatif sur tous les écrans. Les composants translucides et le flou du dock laissent place à des surfaces Material 3.
+- **Six palettes persistantes** — Sauge (par défaut), Lavande, Ambre, Océan, Corail, plus « Matériel » qui reprend la couleur dominante du fond d'écran (Android 12+). Chaque palette fournit ses rôles clairs et sombres : arrière-plans, cartes, conteneurs actifs, bordures et accents changent instantanément et sont conservés au redémarrage.
+- **Nouvelle barre de navigation** — quatre onglets dans l'ordre Accueil / découvrir / bibliothèque / réglages. Capsule primaire qui glisse avec un ressort, icônes ligne à l'état inactif et pleines à l'état actif, libellé sous chaque icône, micro-animations de pression et de sélection.
+- **Transitions d'onglets façon iOS 27** — glissement directionnel, fondu et mise à l'échelle synchronisés, interruption gestuelle naturelle ; repli en fondu simple quand les animations sont désactivées (accessibilité ou échelle d'animation à zéro).
+- **Toggle « Liquid Glass / Flou » supprimé** — le réglage d'apparence ne garde que Clair / Sombre et les palettes.
+- **Bibliothèque** — l'état vide et ses deux actions ne se superposent plus.
 
 ## Nouveautés 1.0.4
 
@@ -121,7 +130,7 @@ Les 51 extensions listées sur `stremio-addons.net` ont été récupérées et l
 - **Lecteur complet** — vitesse de lecture, sous-titres, pistes audio, ±10 s, Picture-in-Picture, rotation, reprise à la position enregistrée.
 - **Bibliothèque et reprise** — progression locale, « Continuer à regarder », ajout à la bibliothèque.
 - **Mode invité** — l'app démarre sans compte ; la connexion Stremio est optionnelle.
-- **UI Liquid Glass** — Jetpack Compose, typographie Inter, matériaux translucides, thème sombre, animations douces.
+- **UI Material You** — Jetpack Compose, typographie Inter, palettes claires et sombres, surfaces tonales, animations douces.
 
 ---
 
