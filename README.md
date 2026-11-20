@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.2-0A84FF" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.3-0A84FF" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,44 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.2-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.2/vela-1.0.2-release.apk) |
+| **APK release (signé)** | [vela-1.0.3-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.3/vela-1.0.3-release.apk) |
 | **Taille** | 59 590 727 octets (≈ 56,8 Mio) |
-| **SHA-256** | `27b9ba69793e1fe8636881a6d949e973c5ef44a4b3387e7a4435ad46d45c5d38` |
+| **SHA-256** | `7fc8583de182cdab0610989c5c2fea48988c3afe56d411d5178b7dca3ec916cf` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.2 (versionCode 3 · `com.vela.stream`) |
+| **Version** | 1.0.3 (versionCode 4 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.2-release.apk
-# 27b9ba69793e1fe8636881a6d949e973c5ef44a4b3387e7a4435ad46d45c5d38
+sha256sum vela-1.0.3-release.apk
+# 7fc8583de182cdab0610989c5c2fea48988c3afe56d411d5178b7dca3ec916cf
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.2-release.apk
+adb install -r vela-1.0.3-release.apk
 ```
 
-Les sommes de contrôle des deux APK (release et debug) sont publiées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.2/SHA256SUMS.txt).
+Les sommes de contrôle de tous les APK publiés sont regroupées avec la release :
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.3/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.3
+
+- **Accueil** — les rangées de catalogues ne disparaissent plus définitivement après une recherche : le moteur partage le modèle du board, elles se rechargent au retour sur l'accueil.
+- **Navigation** — Retour depuis Découvrir, Bibliothèque ou Réglages revient à l'accueil au lieu de quitter l'app ; Retour ferme aussi les feuilles (flux, options, sous-titres).
+- **Fiche** — une seule action « Marquer comme vu / non vu » (les deux s'affichaient), « Reprendre » pour un film commencé, et plus de flux hérités de l'épisode précédent.
+- **Lecteur** — le curseur de progression ne revient plus en arrière pendant le glissement ; la position affichée suit le doigt.
+- **Fin de flux** — la progression locale est effacée : rouvrir un titre terminé repart à 0:00 au lieu de « Terminé ».
+- **Sous-titres** — réellement désactivés par défaut, comme l'indiquait l'interface, avec sélection explicite de la piste choisie.
+- **Recherche** — plus de roue de chargement infinie sous « Aucun résultat ».
+- **Extensions** — plus de « Préparation des extensions… » sans fin quand la liste est vide.
+- **Torrent** — les premières pièces du fichier choisi sont priorisées (et non celles du torrent depuis l'index 0) ; le statut n'est plus affiché en double.
+- **Parcours revalidés** : MP4 (lecture, glissement 0:19 → 0:44, relecture à 0:00), HLS (1:11 / 10:34), torrent (jusqu'à 71 pairs, 100 %, 2:30 / 10:34).
 
 ## Nouveautés 1.0.2
 
@@ -142,7 +155,6 @@ La signature de release lit `keystore.properties` (non versionné) ; sans ce fic
 - **MKV** : les codecs non pris en charge par le matériel/Media3 (certains profils HEVC, audio DTS) peuvent ne pas être décodés ; il n'y a pas de transcodage côté serveur.
 - **Torrent** : nécessite DHT ou trackers joignables ; un swarm vide laisse l'app en attente puis affiche une erreur explicite.
 - **YouTube** : les sources YouTube ne sont pas lues.
-- **Reprise en fin de flux** : rouvrir un contenu dont la progression est proche de la fin peut afficher l'écran « Terminé » immédiatement au lieu de repartir du début.
 
 ---
 
