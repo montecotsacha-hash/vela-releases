@@ -27,7 +27,7 @@
 |---|---|
 | **APK release (signé)** | [vela-1.0.7-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.7/vela-1.0.7-release.apk) |
 | **Taille** | 59 457 471 octets (≈ 56,7 Mio) |
-| **SHA-256** | `05de3d5d1ed5d7ca30eb888143f0d10161d338b508cd261496aa1ecc9d6b20a7` |
+| **SHA-256** | `c7ee537cd56b3bddeaece79553abac97fd357637eb6abc1aac920eb36480f6b6` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
 | **Version** | 1.0.7 (versionCode 8 · `com.vela.stream`) |
@@ -37,7 +37,7 @@ Vérifier le fichier téléchargé :
 
 ```bash
 sha256sum vela-1.0.7-release.apk
-# 05de3d5d1ed5d7ca30eb888143f0d10161d338b508cd261496aa1ecc9d6b20a7
+# c7ee537cd56b3bddeaece79553abac97fd357637eb6abc1aac920eb36480f6b6
 ```
 
 Installation :
