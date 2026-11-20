@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img alt="Release" src="https://img.shields.io/badge/release-1.0.6-386A5E" />
+  <img alt="Release" src="https://img.shields.io/badge/release-1.0.7-386A5E" />
   <img alt="Android" src="https://img.shields.io/badge/Android-8.0%2B%20(API%2026)-3DDC84" />
   <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-Jetpack%20Compose-7F52FF" />
   <img alt="Rust" src="https://img.shields.io/badge/core-Rust%20·%20stremio--core-000000" />
@@ -25,31 +25,39 @@
 
 | | |
 |---|---|
-| **APK release (signé)** | [vela-1.0.6-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.6/vela-1.0.6-release.apk) |
-| **Taille** | 60 011 619 octets (≈ 57,2 Mio) |
-| **SHA-256** | `b61ff858fd290ea23c940edfa8944d4a31cc4a45b060f16b18b928b601bccb12` |
+| **APK release (signé)** | [vela-1.0.7-release.apk](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.7/vela-1.0.7-release.apk) |
+| **Taille** | 59 457 471 octets (≈ 56,7 Mio) |
+| **SHA-256** | `05de3d5d1ed5d7ca30eb888143f0d10161d338b508cd261496aa1ecc9d6b20a7` |
 | **Architectures** | `arm64-v8a`, `x86_64` |
 | **Android** | 8.0 Oreo (API 26) → 15 (API 35) |
-| **Version** | 1.0.6 (versionCode 7 · `com.vela.stream`) |
+| **Version** | 1.0.7 (versionCode 8 · `com.vela.stream`) |
 | **Signature** | certificat de release `CN=Vela` |
 
 Vérifier le fichier téléchargé :
 
 ```bash
-sha256sum vela-1.0.6-release.apk
-# b61ff858fd290ea23c940edfa8944d4a31cc4a45b060f16b18b928b601bccb12
+sha256sum vela-1.0.7-release.apk
+# 05de3d5d1ed5d7ca30eb888143f0d10161d338b508cd261496aa1ecc9d6b20a7
 ```
 
 Installation :
 
 ```bash
-adb install -r vela-1.0.6-release.apk
+adb install -r vela-1.0.7-release.apk
 ```
 
 Les sommes de contrôle de tous les APK publiés sont regroupées avec la release :
-[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.6/SHA256SUMS.txt).
+[SHA256SUMS.txt](https://github.com/montecotsacha-hash/vela-releases/releases/download/v1.0.7/SHA256SUMS.txt).
 
 ---
+
+## Nouveautés 1.0.7
+
+- **Nouveau logo** — le V blanc et son étincelle sur tuile noire remplacent l'ancienne marque : icône adaptative, icône thématique, logo d'accueil et bannière.
+- **Mises à jour intégrées** — Réglages → Général → « Rechercher les mises à jour ». L'app interroge la dernière release GitHub, compare les versions, télécharge l'APK signé et ouvre l'installeur Android (une confirmation système reste obligatoire). Si l'installation directe n'est pas possible, la page de la release s'ouvre.
+- **Films à la une hebdomadaires** — les trois titres du hero sont choisis dans un pool mélangé avec la semaine ISO : ils tournent chaque lundi, restent stables pendant la semaine et se rafraîchissent même si l'app reste ouverte.
+- **Correctif du tremblement des rangées** — les affiches réservent deux lignes de titre et une ligne de métadonnées. La hauteur d'une rangée ne change plus pendant un défilement horizontal rapide, donc les sections suivantes ne tremblent plus.
+- **Plus d'animations bouncy** — affiches, pilules, boutons, boutons d'icône, interrupteurs, points du hero et lignes de flux ont un appui élastique ou une apparition décalée. La barre de navigation s'efface pendant l'ouverture d'une feuille.
 
 ## Nouveautés 1.0.6
 
@@ -140,6 +148,7 @@ Les 51 extensions listées sur `stremio-addons.net` ont été récupérées et l
 - **Bibliothèque et reprise** — progression locale, « Continuer à regarder », ajout à la bibliothèque.
 - **Mode invité** — l'app démarre sans compte ; la connexion Stremio est optionnelle.
 - **UI Material You** — Jetpack Compose, typographie Inter, palettes claires et sombres, surfaces tonales, animations douces.
+- **Mises à jour intégrées** — vérification de la dernière release GitHub depuis les Réglages, téléchargement de l'APK signé et ouverture de l'installeur Android.
 
 ---
 
